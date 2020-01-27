@@ -24,8 +24,52 @@ Assert::That(knight("a1", "f7"), Equals(5));
 */
 
 #include <string>
+#include <iostream>
+#include <vector>
+#include <map>
+using namespace std;
+
+class F {
+    int x;
+    int y;
+    int steps;
+public:
+    F(string str) {
+        map<char, int> chint;
+        chint.insert(make_pair('a', 1));
+        chint.insert(make_pair('b', 2));
+        chint.insert(make_pair('c', 3));
+        chint.insert(make_pair('d', 4));
+        chint.insert(make_pair('e', 5));
+        chint.insert(make_pair('f', 6));
+        chint.insert(make_pair('g', 7));
+        chint.insert(make_pair('h', 8));
+        char arrX[8] = {'a', 'b','c','d','e','f','g','h'};
+        char arrY[8] = { '1', '2','3','4','5','6','7','8'};
+        char chX = (str[0]);
+        char chY = (str[1]);
+        steps = 0;
+    }
+    int getX() {
+        return x;
+    }
+    int getY() {
+        return y;
+    }
+};
+
+int knight(std::string start, std::string finish);
+
+int main() {
+    string start = "a1";
+    string finish = "a6";
+    knight(start, finish);
+    return 0;
+}
 
 int knight(std::string start, std::string finish) {
-  return 0;
+    F objF(start);
+    cout << "Place F x = " << objF.getX() << " y = " << objF.getY() << endl;
+    return 0;
 }
 

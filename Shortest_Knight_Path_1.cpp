@@ -78,7 +78,25 @@ public:
 		else if (Sx > 0 && Sy < 0) D = "SE";
 		else if (Sx > 0 && Sy > 0) D = "NE";
 		else if (Sx == 0 && Sy > 0) D = "N";
-		// here
+		else if (Sx == 0 && Sy < 0) D = "S";
+		else if (Sx < 0 && Sy > 0) D = "NW";
+		else if (Sx < 0 && Sy < 0) D = "SW";
+		else if (Sx < 0 && Sy == 0) D = "W";
+	}
+	void choiceMove(P objP) {
+		// возможные координаты хода
+		int p_1[2] = { x + 2,y + 1 };
+		int p_2[2] = { x + 1,y + 2 };
+
+		// проверка выхода за площадку
+		bool outBoard;
+		// проверка попадания в зону 
+		bool inZone;
+		// проверка направления не в сторону цели
+		bool noTo;
+		// проверка попадания на одну линию по x или y
+		bool inLine;
+		// приоритет у длинного хода
 
 	}
 };
